@@ -10809,7 +10809,7 @@ background-image:url(http://xseededucation.com/wp-content/uploads/2016/09/manila
     border: 2px solid #ba131a;
     height: 32px;
     opacity: 1;
-    line-height: 30px
+    line-height: 14px;
   }
 
   .v-item .subtitle2 .tiny-details{
@@ -11063,8 +11063,10 @@ background-image:url(http://xseededucation.com/wp-content/uploads/2016/09/manila
     padding-bottom: 40px;
     position: absolute;
     top: 0;
-    height: 200px
+    height: 200px !important;
   }
+
+
 
    .section .section-buttons {
     display: none
@@ -11226,6 +11228,12 @@ background-image:url(http://xseededucation.com/wp-content/uploads/2016/09/manila
 
   #TeamIn .teamItem .text {
     padding-left: 0
+  }
+  #fullPager {
+    height: auto !important;
+    position: relative !important;
+    touch-action: none !important;
+    transform: translate3d(0px, 0px, 0px) !important;
   }
 }
 

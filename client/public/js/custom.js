@@ -502,11 +502,14 @@ if (!Modernizr.history) {
       if ( this.$nextSlide.length != 0 ) {
         this.$nextSection = this.$nextSlide;
       }
-      $('#section-1').css('display','none');
-      $('#section-2').css('display','none');
-      $('#section-3').css('display','none');
-      $('#section-4').css('display','none');
-      $('#section-'+nextIndex).css('display','table');
+      if($(window).outerWidth() > 991){
+        $('#section-1').css('display','none');
+        $('#section-2').css('display','none');
+        $('#section-3').css('display','none');
+        $('#section-4').css('display','none');
+        $('#section-'+nextIndex).css('display','table');
+      }
+      
       
       this._navOverlayScroll(true); // check for scroll
       this._runSectionEvents(); // run animations, videos, etc.
