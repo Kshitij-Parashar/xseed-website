@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ee81ce77-0d58-4c96-b6f9-2adf9eaca7c0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/public/dist/bundle.js" afterPath="$PROJECT_DIR$/client/public/dist/bundle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/public/js/index.js" afterPath="$PROJECT_DIR$/client/public/js/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/public/js/custom.js" afterPath="$PROJECT_DIR$/client/public/js/custom.js" />
     </list>
     <ignored path="$PROJECT_DIR$/../React-Todo/.tmp/" />
     <ignored path="$PROJECT_DIR$/../React-Todo/temp/" />
@@ -107,11 +104,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="custom.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="custom.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/public/js/custom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2760">
-              <caret line="184" column="45" selection-start-line="184" selection-start-column="45" selection-end-line="184" selection-end-column="45" />
+            <state relative-caret-position="246">
+              <caret line="2522" column="26" selection-start-line="2522" selection-start-column="26" selection-end-line="2522" selection-end-column="26" />
               <folding>
                 <element signature="e#20357#21746#0" expanded="false" />
                 <element signature="e#21777#21975#0" expanded="false" />
@@ -125,18 +122,18 @@
                 <element signature="e#28169#28831#0" expanded="false" />
                 <element signature="e#28927#30357#0" expanded="false" />
                 <element signature="e#76336#76578#0" expanded="false" />
-                <marker date="1500050580000" expanded="true" signature="54599:54638" ph="..." />
-                <marker date="1500050580000" expanded="true" signature="54748:54787" ph="..." />
+                <marker date="1500065815000" expanded="true" signature="54599:54638" ph="..." />
+                <marker date="1500065815000" expanded="true" signature="54748:54787" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/public/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="1078" column="65" selection-start-line="1078" selection-start-column="65" selection-end-line="1078" selection-end-column="65" />
+            <state relative-caret-position="378">
+              <caret line="391" column="0" selection-start-line="391" selection-start-column="0" selection-end-line="391" selection-end-column="0" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
                 <element signature="e#126#169#0" expanded="true" />
@@ -174,11 +171,11 @@
         <option value="$PROJECT_DIR$/client/public/dist/bundle.js" />
         <option value="$PROJECT_DIR$/client/public/css/styles.css" />
         <option value="$PROJECT_DIR$/services/js/server.js" />
-        <option value="$PROJECT_DIR$/client/public/js/custom.js" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/client/public/js/index.js" />
+        <option value="$PROJECT_DIR$/client/public/js/custom.js" />
       </list>
     </option>
   </component>
@@ -294,7 +291,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/fugu-frontend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../xseed" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -466,15 +463,15 @@
       <workItem from="1500048541455" duration="2889000" />
       <workItem from="1500052590720" duration="870000" />
       <workItem from="1500058688365" duration="445000" />
-      <workItem from="1500059444794" duration="1827000" />
+      <workItem from="1500059444794" duration="2655000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83872000" />
+    <option name="totallyTimeSpent" value="84700000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="807" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="807" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
@@ -973,29 +970,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/public/js/custom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2760">
-          <caret line="184" column="45" selection-start-line="184" selection-start-column="45" selection-end-line="184" selection-end-column="45" />
-          <folding>
-            <element signature="e#20357#21746#0" expanded="false" />
-            <element signature="e#21777#21975#0" expanded="false" />
-            <element signature="e#22082#22267#0" expanded="false" />
-            <element signature="e#22469#23387#0" expanded="false" />
-            <element signature="e#23423#24111#0" expanded="false" />
-            <element signature="e#24151#24577#0" expanded="false" />
-            <element signature="e#24671#25016#0" expanded="false" />
-            <element signature="e#25181#26288#0" expanded="false" />
-            <element signature="e#26395#28063#0" expanded="false" />
-            <element signature="e#28169#28831#0" expanded="false" />
-            <element signature="e#28927#30357#0" expanded="false" />
-            <element signature="e#76336#76578#0" expanded="false" />
-            <marker date="1500050580000" expanded="true" signature="54599:54638" ph="..." />
-            <marker date="1500050580000" expanded="true" signature="54748:54787" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -1077,11 +1051,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/public/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="1078" column="65" selection-start-line="1078" selection-start-column="65" selection-end-line="1078" selection-end-column="65" />
+        <state relative-caret-position="378">
+          <caret line="391" column="0" selection-start-line="391" selection-start-column="0" selection-end-line="391" selection-end-column="0" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
             <element signature="e#126#169#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/public/js/custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="2522" column="26" selection-start-line="2522" selection-start-column="26" selection-end-line="2522" selection-end-column="26" />
+          <folding>
+            <element signature="e#20357#21746#0" expanded="false" />
+            <element signature="e#21777#21975#0" expanded="false" />
+            <element signature="e#22082#22267#0" expanded="false" />
+            <element signature="e#22469#23387#0" expanded="false" />
+            <element signature="e#23423#24111#0" expanded="false" />
+            <element signature="e#24151#24577#0" expanded="false" />
+            <element signature="e#24671#25016#0" expanded="false" />
+            <element signature="e#25181#26288#0" expanded="false" />
+            <element signature="e#26395#28063#0" expanded="false" />
+            <element signature="e#28169#28831#0" expanded="false" />
+            <element signature="e#28927#30357#0" expanded="false" />
+            <element signature="e#76336#76578#0" expanded="false" />
+            <marker date="1500065815000" expanded="true" signature="54599:54638" ph="..." />
+            <marker date="1500065815000" expanded="true" signature="54748:54787" ph="..." />
           </folding>
         </state>
       </provider>

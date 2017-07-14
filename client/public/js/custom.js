@@ -2515,7 +2515,9 @@ if (!Modernizr.history) {
 
     var fp = $('#fullpager'),
       scrolling=true;
-
+    if($(window).outerWidth() < 991){
+      scrolling=false;
+    }
     //if(!scrolling)
     //{
     //	$('.top-nav').addClass('has-background');
