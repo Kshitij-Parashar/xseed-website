@@ -1,7 +1,7 @@
 {
-  "name": "xseed-website",
+  "name": "fab-hotels",
   "version": "1.0.0",
-  "description": "xseed education",
+  "description": "FabHotels",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

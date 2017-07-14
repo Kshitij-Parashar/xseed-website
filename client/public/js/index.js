@@ -21,7 +21,9 @@ class ListHolder extends React.Component {
             country: '',
             city:'',
             message: '',
-            confirmValue: ''
+            confirmValue: '',
+            error:false,
+            success:false
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleFormSubmit = this.handleFormSubmit.bind(this);
@@ -32,62 +34,105 @@ class ListHolder extends React.Component {
     handleChange(event) {
         console.log(event.target.name,event.target.value);
         if(event.target.name == 'ninja_forms_field_35') {
-            this.setState({existing: event.target.value});
+            if(event.target.value) {
+                this.setState({existing: event.target.value});
+            }else{
+                this.setState({existing: ''});
+            }
         }
         if(event.target.name == 'ninja_forms_field_50') {
-            this.setState({customerType: event.target.value});
+            if(event.target.value) {
+                this.setState({customerType: event.target.value});
+            }else{
+                this.setState({customerType: ''});
+            }
         }
         if(event.target.name == 'ninja_forms_field_24') {
-            this.setState({name: event.target.value});
+            if(event.target.value) {
+                this.setState({name: event.target.value});
+            }else{
+                this.setState({name: ''});
+            }
         } if(event.target.name == 'ninja_forms_field_26') {
-            this.setState({email: event.target.value});
+            if(event.target.value) {
+                this.setState({email: event.target.value});
+            }else{
+                this.setState({email: ''});
+            }
         } if(event.target.name == 'ninja_forms_field_36') {
-            this.setState({phone: event.target.value});
+            if(event.target.value) {
+                this.setState({phone: event.target.value});
+            }else{
+                this.setState({phone: ''});
+            }
         } if(event.target.name == 'ninja_forms_field_53') {
-            this.setState({country: event.target.value});
+            if(event.target.value) {
+                this.setState({country: event.target.value});
+            }else{
+                this.setState({country: ''});
+            }
         }if(event.target.name == 'ninja_forms_field_55') {
-            this.setState({city: event.target.value});
+            if(event.target.value) {
+                this.setState({city: event.target.value});
+            }else{
+                this.setState({city: ''});
+            }
         } if(event.target.name == 'ninja_forms_field_32') {
-            this.setState({message: event.target.value});
+            if(event.target.value) {
+                this.setState({message: event.target.value});
+            }else{
+                this.setState({message: ''});
+            }
         } if(event.target.name == 'ninja_forms_field_48') {
-            this.setState({confirmValue: event.target.value});
+            if(event.target.value) {
+                this.setState({confirmValue: event.target.value});
+            }else{
+                this.setState({confirmValue: ''});
+            }
         }
         console.log(this.state);
     }
 
     handleFormSubmit(e) {
-        var options = {
-            method: 'POST',
-            url: 'http://34.227.13.186:3001/send_mail',
-            headers: {
+        if(this.state.name && this.state.email && this.state.country &&  this.state.confirmValue &&  this.state.message) {
+            var options = {
+                method: 'POST',
+                url: 'http://34.227.13.186:3001/send_mail',
+                headers: {
 
-                'content-type': 'application/json'
-            },
-            body: {
-                'existing':this.state.existing,
-                'customerType': this.state.customerType,
-                'full_name': this.state.name,
-                'email':this.state.email,
-                'phone': this.state.phone,
-                'country':this.state.country,
-                'city':this.state.city,
-                'message': this.state.message,
-                'confirmValue': this.state.confirmValue
-            },
-            json: true
-        };
-        request(options).then(data=>this.setState({
-            existing:false,
-            customerType: '',
-            name: '',
-            email:'',
-            phone: '',
-            country: '',
-            city:'',
-            message: '',
-            confirmValue: ''
-        })
-        );
+                    'content-type': 'application/json'
+                },
+                body: {
+                    'existing': this.state.existing,
+                    'customerType': this.state.customerType,
+                    'full_name': this.state.name,
+                    'email': this.state.email,
+                    'phone': this.state.phone,
+                    'country': this.state.country,
+                    'city': this.state.city,
+                    'message': this.state.message,
+                    'confirmValue': this.state.confirmValue
+                },
+                json: true
+            };
+            request(options).then(data=>this.setState({
+                    existing: false,
+                    customerType: '',
+                    name: '',
+                    email: '',
+                    phone: '',
+                    country: '',
+                    city: '',
+                    message: '',
+                    confirmValue: '',
+                    error:false,
+                    success:true
+                })
+            );
+        }
+        else{
+            this.setState({error: true});
+        }
 
     }
 
@@ -102,15 +147,19 @@ class ListHolder extends React.Component {
             country: '',
             city:'',
             message: '',
-            confirmValue: ''
+            confirmValue: '',
+            error:false,
+            success:false
         });
     }
 
     render() {
+        let {existing,customerType,name,email,phone,country,city,message,confirmValue,error,success} = this.state;
+
         var style1 ={
             width: '260px',
             display: 'none'
-        }, widthFull = {width: '100%'},show={visibility: 'visible !important', opacity: '1'};
+        }, widthFull = {width: '100%'},show={visibility: 'visible !important', opacity: '1'},red={color:'red'},green={color:'green'};
 
 
         return <div>
@@ -1026,7 +1075,8 @@ a complete solution</span></h2>
                                         <div className="clear"></div>
                                     </div>
                                     <h4>Contact Us</h4>
-
+                                    {success >= 1 && <h6 style={green}>Thanks for the subscribing to us. Someone from our team will contact you shortly!</h6>}
+                                    {error >= 1 && <h6 style={red}>Please fill in the correct required details.</h6>}
                                     <div id="ninja_forms_form_9_cont" className="ninja-forms-cont">
                                         <div id="ninja_forms_form_9_wrap" className="ninja-forms-form-wrap">
                                             <div id="ninja_forms_form_9_response_msg"
@@ -1063,13 +1113,13 @@ a complete solution</span></h2>
                                                                 <input id="ninja_forms_field_50_3" name="ninja_forms_field_50" type="radio"  value="Other" onChange={this.handleChange} className="ninja-htmlForms-field  ninja-htmlForms-field-conditional-listen " rel="50" />Other</label></li></ul></span>
                                                             </div>
                                                             <div className="field-wrap text-wrap label-inside" id="ninja_forms_field_24_div_wrap" data-visible="1">
-                                                                    <input id="ninja_forms_field_24" data-mask="" data-input-limit="" value={this.state.name} onChange={this.handleChange} data-input-limit-type="char" data-input-limit-msg="" name="ninja_forms_field_24" type="text" placeholder="" className="ninja-htmlForms-field  ninja-htmlForms-req "  rel="24" />
+                                                                    <input id="ninja_forms_field_24" data-mask="" data-input-limit=""  value={this.state.name} onChange={this.handleChange} data-input-limit-type="char" data-input-limit-msg="" name="ninja_forms_field_24" type="text" placeholder="Full Name*" className="ninja-htmlForms-field  ninja-htmlForms-req "  rel="24" />
 
 
                                                             </div>
                                                             <div className="field-wrap text-wrap label-inside" id="ninja_forms_field_26_div_wrap" data-visible="1">
 
-                                                                    <input id="ninja_forms_field_26" data-mask="" data-input-limit="" value={this.state.email} onChange={this.handleChange} data-input-limit-type="char" data-input-limit-msg="" name="ninja_forms_field_26" type="text" placeholder="" className="ninja-htmlForms-field  ninja-htmlForms-req email "  rel="26" />
+                                                                    <input id="ninja_forms_field_26" data-mask="" data-input-limit=""  value={this.state.email} onChange={this.handleChange} data-input-limit-type="char" data-input-limit-msg="" name="ninja_forms_field_26" type="text" placeholder="Email*" className="ninja-htmlForms-field  ninja-htmlForms-req email "  rel="26" />
 
 
                                                             </div>
@@ -1340,7 +1390,7 @@ a complete solution</span></h2>
 
                                                             </div>
                                                             <div className="field-wrap textarea-wrap label-inside" id="ninja_forms_field_32_div_wrap" data-visible="1">
-                                                                <textarea name="ninja_forms_field_32" id="ninja_forms_field_32" className="ninja-htmlForms-field ninja-htmlForms-req" value={this.state.message} onChange={this.handleChange} rel="32" data-input-limit="" data-input-limit-type="char" data-input-limit-msg="character(s) left">Your message here *</textarea>
+                                                                <textarea name="ninja_forms_field_32" id="ninja_forms_field_32" placeholder="Your message here*" className="ninja-htmlForms-field ninja-htmlForms-req" value={this.state.message} onChange={this.handleChange} rel="32" data-input-limit="" data-input-limit-type="char" data-input-limit-msg="character(s) left">Your message here *</textarea>
                                                             </div>
                                                             <div className="field-wrap spam-wrap label-left" id="ninja_forms_field_48_div_wrap" data-visible="1">
 
@@ -1444,9 +1494,4 @@ a complete solution</span></h2>
 }
 
 
-ReactDOM.render(
-    <Router>
-        <!--Each route is defined with Route-->
-        <Route path="/" component={ListHolder}/>
-    </Router>,
-    document.getElementById('root'));
+ReactDOM.render(<ListHolder/>,document.getElementById('root'));
