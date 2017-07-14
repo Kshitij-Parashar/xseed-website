@@ -58,7 +58,7 @@ class ListHolder extends React.Component {
     handleFormSubmit(e) {
         var options = {
             method: 'POST',
-            url: 'http://localhost:3001/send_mail',
+            url: 'http://34.227.13.186:3001/send_mail',
             headers: {
 
                 'content-type': 'application/json'
