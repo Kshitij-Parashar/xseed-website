@@ -115,19 +115,25 @@ class ListHolder extends React.Component {
                 },
                 json: true
             };
-            request(options).then(data=>this.setState({
-                    existing: false,
-                    customerType: '',
-                    name: '',
-                    email: '',
-                    phone: '',
-                    country: '',
-                    city: '',
-                    message: '',
-                    confirmValue: '',
-                    error:false,
-                    success:true
-                })
+            request(options).then(data=>{
+                    if(data.ERROR){
+                        this.setState({error: true});
+                    }else {
+                        this.setState({
+                            existing: false,
+                            customerType: '',
+                            name: '',
+                            email: '',
+                            phone: '',
+                            country: '',
+                            city: '',
+                            message: '',
+                            confirmValue: '',
+                            error: false,
+                            success: true
+                        });
+                    }
+                }
             );
         }
         else{
